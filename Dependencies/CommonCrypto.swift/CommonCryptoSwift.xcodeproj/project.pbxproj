@@ -259,11 +259,13 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 442RNUGV2T;
 						DevelopmentTeamName = "Nice Boy LLC";
+						LastSwiftMigration = 0830;
 					};
 					D5B2E8A81C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 442RNUGV2T;
 						DevelopmentTeamName = "Nice Boy LLC";
+						LastSwiftMigration = 0830;
 					};
 					D5C6293F1C3A7FAA007F7B7C = {
 						CreatedOnToolsVersion = 7.2;
@@ -523,6 +525,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.CommonCryptoSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -539,6 +542,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.CommonCryptoSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

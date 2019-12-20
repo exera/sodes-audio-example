@@ -8,13 +8,13 @@
 
 import Foundation
 
-public extension NSData {
+public extension Data {
   
   var hexString: String {
     var result = ""
 
-    var bytes = [UInt8](repeating: 0, count: length)
-    getBytes(&bytes, length: length)
+    var bytes = [UInt8](repeating: 0, count: count)
+    copyBytes(to: &bytes, count: count) // here???
 
     for byte in bytes {
       result += String(format: "%02x", UInt(byte))

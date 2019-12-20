@@ -13,82 +13,82 @@ public struct Hash {
 
   // MARK: - NSData
 
-  public static func MD2(data: NSData) -> NSData {
-    return Hash.hash(data: data, crypto: .MD2)
+  public static func MD2(_ data: Data) -> Data {
+    return Hash.hash(data, crypto: .MD2)
   }
 
-  public static func MD4(data: NSData) -> NSData {
-    return Hash.hash(data: data, crypto: .MD4)
+  public static func MD4(_ data: Data) -> Data {
+    return Hash.hash(data, crypto: .MD4)
   }
 
-  public static func MD5(data: NSData) -> NSData {
-    return Hash.hash(data: data, crypto: .MD5)
+  public static func MD5(_ data: Data) -> Data {
+    return Hash.hash(data, crypto: .MD5)
   }
 
-  public static func SHA1(data: NSData) -> NSData {
-    return Hash.hash(data: data, crypto: .SHA1)
+  public static func SHA1(_ data: Data) -> Data {
+    return Hash.hash(data, crypto: .SHA1)
   }
 
-  public static func SHA224(data: NSData) -> NSData {
-    return Hash.hash(data: data, crypto: .SHA224)
+  public static func SHA224(_ data: Data) -> Data {
+    return Hash.hash(data, crypto: .SHA224)
   }
 
-  public static func SHA256(data: NSData) -> NSData {
-    return Hash.hash(data: data, crypto: .SHA256)
+  public static func SHA256(_ data: Data) -> Data {
+    return Hash.hash(data, crypto: .SHA256)
   }
 
-  public static func SHA384(data: NSData) -> NSData {
-    return Hash.hash(data: data, crypto: .SHA384)
+  public static func SHA384(_ data: Data) -> Data {
+    return Hash.hash(data, crypto: .SHA384)
   }
 
-  public static func SHA512(data: NSData) -> NSData {
-    return Hash.hash(data: data, crypto: .SHA512)
+  public static func SHA512(_ data: Data) -> Data {
+    return Hash.hash(data, crypto: .SHA512)
   }
 
-  static func hash(data: NSData, crypto: Crypto) -> NSData {
+  static func hash(_ data: Data, crypto: Crypto) -> Data {
     var buffer = Array<UInt8>(repeating: 0, count: Int(crypto.length))
-    let _ = crypto.method(data.bytes, UInt32(data.length), &buffer)
+    let _ = crypto.method([UInt8](data), UInt32(data.count), &buffer)
 
-    return NSData(bytes: buffer, length: buffer.count)
+    return Data(bytes: buffer, count: buffer.count)
   }
 
   // MARK: - String
 
   public static func MD2(_ string: String) -> String? {
-    return Hash.hash(string: string, crypto: .MD2)
+    return Hash.hash(string, crypto: .MD2)
   }
 
   public static func MD4(_ string: String) -> String? {
-    return Hash.hash(string: string, crypto: .MD4)
+    return Hash.hash(string, crypto: .MD4)
   }
 
   public static func MD5(_ string: String) -> String? {
-    return Hash.hash(string: string, crypto: .MD5)
+    return Hash.hash(string, crypto: .MD5)
   }
 
   public static func SHA1(_ string: String) -> String? {
-    return Hash.hash(string: string, crypto: .SHA1)
+    return Hash.hash(string, crypto: .SHA1)
   }
 
   public static func SHA224(_ string: String) -> String? {
-    return Hash.hash(string: string, crypto: .SHA224)
+    return Hash.hash(string, crypto: .SHA224)
   }
 
   public static func SHA256(_ string: String) -> String? {
-    return Hash.hash(string: string, crypto: .SHA256)
+    return Hash.hash(string, crypto: .SHA256)
   }
 
   public static func SHA384(_ string: String) -> String? {
-    return Hash.hash(string: string, crypto: .SHA384)
+    return Hash.hash(string, crypto: .SHA384)
   }
 
   public static func SHA512(_ string: String) -> String? {
-    return Hash.hash(string: string, crypto: .SHA512)
+    return Hash.hash(string, crypto: .SHA512)
   }
 
-  static func hash(string: String, crypto: Crypto) -> String? {
+  static func hash(_ string: String, crypto: Crypto) -> String? {
     guard let data = string.data(using: String.Encoding.utf8) else { return nil }
 
-    return Hash.hash(data: data as NSData, crypto: crypto).hexString
+    return Hash.hash(data, crypto: crypto).hexString
   }
 }
