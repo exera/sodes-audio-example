@@ -62,7 +62,7 @@ public struct EpisodeDurationParsing {
     public static func string(from duration: TimeInterval) -> String {
         
         guard duration > 0 else {return "00:00"}
-        guard duration <= (23*3600 + 59*60 + 59) else {return "23:59:59"}
+        guard duration <= TimeInterval(23*3600 + 59*60 + 59)  else {return "23:59:59"}
         
         let hours = floor(duration / 3600)
         let minutesAndSeconds = duration.truncatingRemainder(dividingBy: 3600)

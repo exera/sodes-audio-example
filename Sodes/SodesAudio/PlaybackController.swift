@@ -487,7 +487,7 @@ fileprivate extension PlaybackController {
         let keyPaths = ["status", "duration", "loadedTimeRanges"]
         oldValue?.remove(observer: self, for: keyPaths, context: &PlaybackControllerContext)
         currentPlayerItem?.add(observer: self, for: keyPaths, context: &PlaybackControllerContext)
-        currentPlayerItem?.audioTimePitchAlgorithm = AVAudioTimePitchAlgorithmTimeDomain
+        currentPlayerItem?.audioTimePitchAlgorithm = AVAudioTimePitchAlgorithm.timeDomain
         if let observer = currentPlayerItemObserver {
             NotificationCenter.default.removeObserver(observer)
         }

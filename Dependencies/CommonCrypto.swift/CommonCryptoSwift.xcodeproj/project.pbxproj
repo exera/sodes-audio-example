@@ -40,7 +40,6 @@
 
 /* Begin PBXFileReference section */
 		D2F18FD81CDE96130053BC66 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		D2F18FDF1CDE97220053BC66 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		D2F18FE81CDE99250053BC66 /* Hash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
 		D2F18FEE1CDEA2E70053BC66 /* Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		D2F18FF11CDEA8400053BC66 /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
@@ -91,14 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D2F18FDE1CDE97100053BC66 /* CCommonCrypto */ = {
-			isa = PBXGroup;
-			children = (
-				D2F18FDF1CDE97220053BC66 /* module.modulemap */,
-			);
-			path = CCommonCrypto;
-			sourceTree = "<group>";
-		};
 		D5B2E8951C3A780C00C0327D = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +125,6 @@
 		D5C629691C3A809D007F7B7C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				D2F18FDE1CDE97100053BC66 /* CCommonCrypto */,
 				D2F18FE81CDE99250053BC66 /* Hash.swift */,
 				D2F18FEE1CDEA2E70053BC66 /* Crypto.swift */,
 				D2F18FF11CDEA8400053BC66 /* HMAC.swift */,
@@ -257,15 +247,15 @@
 				TargetAttributes = {
 					D5B2E89E1C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 442RNUGV2T;
+						DevelopmentTeam = 62K23G69E2;
 						DevelopmentTeamName = "Nice Boy LLC";
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0940;
 					};
 					D5B2E8A81C3A780C00C0327D = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 442RNUGV2T;
 						DevelopmentTeamName = "Nice Boy LLC";
-						LastSwiftMigration = 0830;
+						LastSwiftMigration = 0940;
 					};
 					D5C6293F1C3A7FAA007F7B7C = {
 						CreatedOnToolsVersion = 7.2;
@@ -280,6 +270,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = D5B2E8951C3A780C00C0327D;
@@ -475,6 +466,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 62K23G69E2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -487,7 +479,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Sources/CCommonCrypto";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -496,6 +488,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 62K23G69E2;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -508,7 +501,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Sources/CCommonCrypto";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -525,7 +518,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.CommonCryptoSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -542,7 +535,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = no.hyper.CommonCryptoSwiftTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
